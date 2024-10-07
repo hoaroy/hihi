@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_profile"
+    android:clickable="true"
+    android:gravity="center"
+    tools:context=".Fragment.Profile.ProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/layout_MainActivity_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_fragment_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_avatar_default" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_profile_fragment_full_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="Họ tên"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="100"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_profile_fragment_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:imeOptions="actionNext"
+                android:maxLength="100"
+                android:text="Email@domain"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="Email"/>
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_profile_fragment_address"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_baseline_maps_home_work_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:hint="Địa chỉ"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="100"
+                android:text=""
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_profile_fragment_phone_number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_baseline_phone_24">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:enabled="false"
+                android:hint="Số điện thoại"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="100"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_profile_fragment_update"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/update_profile"
+            android:backgroundTint="#00BCD4"/>
+
+    </LinearLayout>
+
+</LinearLayout>

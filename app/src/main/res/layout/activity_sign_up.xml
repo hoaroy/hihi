@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#A2E48C"
+    tools:context=".Activity.SignUpActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:text="Tạo Tài khoản"
+                android:textSize="30sp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/form_SignUpActivity_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:layout_marginBottom="15dp"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:startIconDrawable="@drawable/ic_baseline_phone_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="clear_text">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLength="10"
+                    android:inputType="phone"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="Số điện thoại"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/form_SignUpActivity_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                app:errorEnabled="true"
+                android:layout_marginBottom="15dp"
+                app:startIconDrawable="@drawable/ic_person"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="clear_text">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLength="100"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="Họ và tên"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/form_SignUpActivity_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                app:errorEnabled="true"
+                android:layout_marginBottom="15dp"
+                app:startIconDrawable="@drawable/ic_baseline_password_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLength="20"
+                    android:minEms="6"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="Mật khẩu"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/form_SignUpActivity_confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                app:errorEnabled="true"
+                android:layout_marginBottom="15dp"
+                app:startIconDrawable="@drawable/ic_baseline_password_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLength="20"
+                    android:minEms="6"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="Xác nhận mật khẩu"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/form_SignUpActivity_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                app:errorEnabled="true"
+                android:layout_marginBottom="15dp"
+                app:startIconDrawable="@drawable/ic_baseline_maps_home_work_24"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:endIconMode="clear_text">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:maxLength="100"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="10dp"
+                    android:hint="Địa chỉ"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<EditText
+                android:id="@+id/et_SignUpActivity_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:maxLength="100"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="Số điện thoại"/>-->
+            <!--<EditText
+                android:id="@+id/et_SignUpActivity_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:maxLength="100"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="họ và tên"/>-->
+
+            <!--<EditText
+                android:id="@+id/et_SignUpActivity_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:maxLength="100"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="password"/>-->
+            <!--<EditText
+                android:id="@+id/et_SignUpActivity_confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:maxLength="100"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="password"/>-->
+
+            <!--<EditText
+                android:id="@+id/et_SignUpActivity_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:maxLength="100"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:hint="Address"/>-->
+            <Button
+                android:id="@+id/btn_SignUpActivity_signUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Đăng ký"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
